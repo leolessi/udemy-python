@@ -23,3 +23,39 @@ print("lista_AB = lista_A + lista_B -> ", lista_AB)
 
 lista_A.extend(lista_B)
 print("lista_A.extend(lista_B) -> ", lista_A)
+
+"""
+Cuidados com dados mutaveis
+
+    Com dados imutaveis (strings), o = copia o valor
+        stringA = "Leonardo"
+        stringB = stringA
+        stringA = "Leonardo Lessi"
+    Nesse caso, a stringA muda seu valor para 'Leonardo Lessi' e a stringB continua com o valor 'Leonardo'
+
+    Com dados mutaveis (listas), o = aponta para o mesmo valor na memoria
+        listaA = ['Leonardo', 'Maria']
+        listaB = listaA
+
+        listaA[1] = 'Mutavel'
+    Nesse caso, a listaA e a listaB retornam o mesmo valor na memoria -> ['Leonardo', 'Mutavel']
+    Para contornar essa situacao, utilizamos o metodo .copy:
+        listaA = ['Leonardo', 'Maria']
+        listaB = listaA.copy()
+
+        listaA[1] = 'Mutavel'
+    Ja nesse caso, a listaB retorna o valor inicial da listaA (['Leonardo', 'Maria']) e a listaA retorna o valor modificado (['Leonardo', 'Mutavel'])
+"""
+
+"""
+For in com listas
+"""
+
+lista = ["Maria", "Helena", "Leonardo"]
+
+for nome in lista:
+    print(nome)
+
+# for i, nome in enumerate(lista):
+#     if i == 1:
+#         print(nome)
