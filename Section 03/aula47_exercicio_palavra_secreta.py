@@ -101,7 +101,7 @@ while True:
             nova_frase += letra_secreta
         # caso a letras não esteja nessa posição, concatena um * na posição da nova_frase
         else:
-            nova_frase += "*"
+            nova_frase += "_"
 
     if nova_frase == segredo:
         break
